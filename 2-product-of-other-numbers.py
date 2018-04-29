@@ -21,6 +21,44 @@ import unittest
 #   [7*3*4, 1*3*4, 1*7*4, 1*7*3]
 
 # Do not use division in your solution.
+"""
+
+Answer may contain negative numbers too!
+
+Some corner cases are:
+
+Array: [-3,-2,-1] 
+Answer: -6(-3 * -2 * -1)
+
+Array: [-9,-3,8,2,4] 
+Answer: 216(-9 * -3 * 8)
+
+Array: [-3,2,0] 
+Answer: 0
+
+Array: [-3,-2,-1] 
+Answer: -6
+
+[0, -1, 3, 100, 70, 50]
+
+=> 70*50*100 = 350000
+
+class Solution:
+    # @param A : list of integers
+    # @return an integer
+    def maxp3(self, A):
+        A.sort()
+        n = len(A)
+        if n < 3:
+            return 0
+        m1, m2, m3 = A[-1], A[-2], A[-3]
+        ret = m1*m2*m3
+        if A[0] < 0 and A[1] < 0:
+            temp = A[0]*A[1]*m1
+            if temp > ret:
+                ret = temp
+        return ret
+"""
 
 #
 ######################################################################
